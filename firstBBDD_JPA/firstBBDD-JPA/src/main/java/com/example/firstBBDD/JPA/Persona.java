@@ -4,10 +4,11 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
 
-
+@Entity
 @Data
 @Getter
 @Setter
@@ -25,10 +26,6 @@ public class Persona {
     private Date created_date;
     private String image;
     private Date term_date;
-
-
-
-
 
 
 }
