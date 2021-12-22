@@ -3,7 +3,6 @@ package com.example.firstBBDD.JPA;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,9 +13,10 @@ public class ControllerPOST {
 
     @PostMapping("/persona/add")
     public Persona addNewPerson(@RequestBody Persona persona)throws Exception{
+        if(persona)
         if (persona.getUser()!=null){
             if(persona.getPassword()!=null){
-                if(persona.getFirstName()!= null){
+                if(persona.getName()!= null){
                     if(persona.getLastName()!=null){
                         if(persona.getCompEmail()!=null){
                             if(persona.getPersonalEmail()!=null){

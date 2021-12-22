@@ -4,7 +4,9 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
 
@@ -12,12 +14,16 @@ import java.util.Date;
 @Data
 @Getter
 @Setter
+
 public class Persona {
     @Id
-    private String id;
+    @GeneratedValue
+    private int id;
+
+
     private String user;
     private String password;
-    private String FirstName;
+    private String name;
     private String lastName;
     private String compEmail;
     private String personalEmail;

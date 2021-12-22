@@ -20,16 +20,22 @@ public class ControllerGET {
 
     @GetMapping("/persona/{name}")
     public List <Persona> getbyName(@PathVariable String name) throws Exception{
+        if(personRepositorio.findByName(name).isEmpty()){
+            throw new Exception("Usuario no existe");
+        }
         return personRepositorio.findByName(name);
     }
 
     @GetMapping("/persona")
-    public List <Persona> getAll(){
+    public List <Persona> getAll()throws Exception{
+        if(personRepositorio.findAll().isEmpty()){
+            throw new Exception("Usuario no existe");
+        }
         return personRepositorio.findAll();
     }
 
-    @GetMapping
-    public Optional<Persona> getById(@PathVariable String id) throws Exception {
+    @GetMapping("/persona/{id}")
+    public Optional<Persona> getById(@PathVariable int id) throws Exception {
         if (personRepositorio.findById(id) != null) {
             return personRepositorio.findById(id);
         }
