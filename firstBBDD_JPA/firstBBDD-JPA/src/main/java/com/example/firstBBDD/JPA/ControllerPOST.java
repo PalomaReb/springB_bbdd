@@ -26,37 +26,37 @@ public class ControllerPOST {
                                                 if(persona.getTerm_date()!=null){
                                                     personRepositorio.save(persona);
                                                 }else {
-                                                    throw new Exception("Usuario no puede ser nulo");
+                                                    throw new Exception("term date no puede ser nulo");
                                                 }
                                             }else {
-                                                throw new Exception("Password no puede ser nulo");
+                                                throw new Exception("imagen no puede ser nulo");
                                             }
                                         }else {
-                                            throw new Exception("Nombre no puede ser nulo");
+                                            throw new Exception("la fecha creada no puede ser nulo");
                                         }
                                     }else {
-                                        throw new Exception("Apellido no puede ser nulo");
+                                        throw new Exception("active no puede ser nulo");
                                     }
                                 }else {
-                                    throw new Exception("Email no puede ser nulo");
+                                    throw new Exception("ciudad no puede ser nulo");
                                 }
                             }else {
                                 throw new Exception("Email no puede ser nulo");
                             }
                         }else {
-                            throw new Exception("Ciudad no puede ser nulo");
+                            throw new Exception("email de empresa no puede ser nulo");
                         }
                     }else {
-                        throw new Exception("active false");
+                        throw new Exception("Apellido no puede ser nulo");
                     }
                 }else {
-                    throw new Exception("fecha creada no puede ser nulo");
+                    throw new Exception("Nombre no puede ser nulo");
                 }
             }else {
-                throw new Exception("imagen no puede ser nulo");
+                throw new Exception("password no puede ser nulo");
             }
         }else {
-            throw new Exception("fecha no puede ser nulo");
+            throw new Exception("Usuario no puede ser nulo");
         }
         return persona;
     }
