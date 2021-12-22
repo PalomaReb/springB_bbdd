@@ -13,7 +13,6 @@ public class ControllerPOST {
 
     @PostMapping("/persona/add")
     public Persona addNewPerson(@RequestBody Persona persona)throws Exception{
-        if(persona)
         if (persona.getUser()!=null){
             if(persona.getPassword()!=null){
                 if(persona.getName()!= null){
@@ -21,7 +20,7 @@ public class ControllerPOST {
                         if(persona.getCompEmail()!=null){
                             if(persona.getPersonalEmail()!=null){
                                 if(persona.getCity()!=null){
-                                    if(persona.getActive()!=true){
+                                    if(persona.getActive()!=null){
                                         if(persona.getCreated_date()!=null){
                                             if(persona.getImage()!=null){
                                                 if(persona.getTerm_date()!=null){
