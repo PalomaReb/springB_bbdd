@@ -13,6 +13,7 @@ public class ControllerPOST {
 
     @PostMapping("/persona/add")
     public Persona addNewPerson(@RequestBody Persona persona)throws Exception{
+        //mejor hacer un if y cerrar que hacer ifs anidados
         if (persona.getUser()!=null){
             if(persona.getPassword()!=null){
                 if(persona.getName()!= null){
